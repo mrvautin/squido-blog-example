@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "Squido build file",
   "scripts": {
-    "build": "node cli.js build",
-    "clean": "node cli.js clean",
-    "serve": "node cli.js serve -w -b",
-    "lint": "eslint ./"
+    "build": "squido build"
   },
   "devDependencies": {
     "squido": "latest"
