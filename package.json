@@ -1,11 +1,11 @@
 {
-  "name": "Build file",
+  "name": "squido-build-file",
   "version": "1.0.0",
   "description": "Squido build file",
   "scripts": {
     "build": "squido build"
   },
-  "devDependencies": {
+  "dependencies": {
     "squido": "latest"
   }
 }
