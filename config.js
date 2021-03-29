@@ -9,7 +9,7 @@ const config = {
         port: 4965
     },
     production: {
-        name: 'squido2',
+        name: 'squido',
         description: 'This is the blog description',
         twitterHandle: '@mrvautin',
         baseUrl: 'https://squido.netlify.app',
