@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Visual Studio Code helpful snippets</title>
+    <meta name="description" itemprop="description" content="Visual studio snippets and helpers to make writing code easier" />
+    <link rel="canonical" href="http://localhost:4965/visual-studio-code-helpful-snippets" />
+    <meta property="og:title" content="Visual Studio Code helpful snippets" />
+    <meta property="og:description" content="Visual studio snippets and helpers to make writing code easier" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://localhost:4965/visual-studio-code-helpful-snippets" />
+    <meta property="og:site_name" content="squido" />
+    <meta name="twitter:card" value="summary" />
+    <meta name="twitter:url" value="http://localhost:4965/visual-studio-code-helpful-snippets" />
+    <meta name="twitter:title" value="Visual Studio Code helpful snippets" />
+    <meta name="twitter:description" value="Visual studio snippets and helpers to make writing code easier" />
+    <meta name="twitter:site" value="@mrvautin" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/css/bootstrap.min.css" integrity="sha512-aqT9YD5gLuLBr6ipQAS+72o5yHKzgZbGxEh6iY8lW/r6gG14e2kBTAJb8XrxzZrMOgSmDqtLaF76T0Z6YY2IHg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/content/stylesheets/style.css">
+    <script src="/content/javascripts/site.js"></script>
+  </head>
+  <body>
+    <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <p class="h5 my-0 me-md-auto brand"><a href="/">mrvautin</a></p>
+        <nav class="my-2 my-md-0 me-md-3">
+            <a class="p-2 text-dark" href="/">Home</a>
+        </nav>
+    </header>
+    <main class="container">
+      <div class="row">
+    <div class="col-md-8 offset-md-2 mb-5">
+        <div class="mt-5">
+            <h1>Visual Studio Code helpful snippets</h1>
+            <hr>
+<p>If you are using VS Code its a huge shame if you aren't making use of the amazingly helpful snippets feature.</p>
+<p>Setting up snippets is easy as:</p>
+<p><strong>Mac1</strong></p>
+<p><code>Code &gt; Preferences &gt; User Snippets &gt; Select a file or create a new one</code></p>
+<p><strong>Windows</strong></p>
+<p><code>File &gt; Preferences &gt; User Snippets &gt; Select a file or create a new one</code></p>
+<p>Once setup, snippets are triggered by pressing:</p>
+<p><code>CTRL+Space</code></p>
+<p><img src="/content/images/vscode-snippet-menu.png" alt="Snippet menu"></p>
+<p>Sometimes its easier to look at an example for the Snippets syntax.</p>
+<p>A simple <code>console.log</code> can be sped up using the following syntax. Once triggered the snippet will create a <code>console.log</code> line and drop your cursor into the middle with single quotes wrapping.</p>
+<pre><code class="language-json">{
+    &quot;Console log&quot;: {
+        &quot;scope&quot;: &quot;javascript,typescript&quot;,
+        &quot;prefix&quot;: &quot;log&quot;,
+        &quot;body&quot;: [
+            &quot;console.log('$1');&quot;
+        ],
+        &quot;description&quot;: &quot;Log output to console&quot;
+    }
+}
+</code></pre>
+<ul>
+<li><strong>Scope:</strong> The file types this snippet is used for</li>
+<li><strong>Prefix:</strong> The snippet name when the snippet menu is opened</li>
+<li><strong>Body:</strong> The main part of the snippet driving the code</li>
+<li><strong>Description:</strong> The description of the snippet</li>
+</ul>
+<h2>Console logging</h2>
+<p>Simple console logging of text:</p>
+<pre><code class="language-json">{
+    &quot;Console log&quot;: {
+        &quot;scope&quot;: &quot;javascript,typescript&quot;,
+        &quot;prefix&quot;: &quot;log&quot;,
+        &quot;body&quot;: [
+            &quot;console.log('$1');&quot;
+        ],
+        &quot;description&quot;: &quot;Log output to console&quot;
+    }
+}
+</code></pre>
+<p>Quick and easy logging of the variable in your clipboard.</p>
+<pre><code class="language-javascript">{
+    &quot;Console log variable&quot;: {
+		&quot;scope&quot;: &quot;javascript,typescript&quot;,
+		&quot;prefix&quot;: &quot;log var&quot;,
+		&quot;body&quot;: [
+			&quot;console.log('${CLIPBOARD}', ${CLIPBOARD});&quot;
+		],
+		&quot;description&quot;: &quot;Console log variable&quot;
+	}
+}
+</code></pre>
+<h2>Loops</h2>
+<p>Quick for loop</p>
+<pre><code class="language-json">{
+    &quot;For Loop&quot;: {
+        &quot;prefix&quot;: [&quot;for&quot;, &quot;for-const&quot;],
+        &quot;body&quot;: [&quot;for (const ${2:element} of ${1:array}) {&quot;, &quot;\t$0&quot;, &quot;}&quot;],
+        &quot;description&quot;: &quot;A for loop.&quot;
+    }
+}
+</code></pre>
+<h2>Wrapping text</h2>
+<p>Wrapping code blocks in the markdown code block syntax</p>
+<pre><code class="language-json">{
+    &quot;Syntax highlighting&quot;: {
+        &quot;scope&quot;: &quot;markdown&quot;,
+        &quot;prefix&quot;: &quot;highlight&quot;,
+        &quot;body&quot;: [
+            &quot;``` javascript&quot;,
+            &quot;${TM_SELECTED_TEXT}&quot;,
+            &quot;```&quot;
+        ],
+        &quot;description&quot;: &quot;Markdown highlight syntax&quot;
+    }
+}
+</code></pre>
+<blockquote>
+<p>For more information on variables available see the official snippet <a href="https://code.visualstudio.com/docs/editor/userdefinedsnippets">docs</a>.</p>
+</blockquote>
+
+        </div>
+    </div>
+</div>
+    </main>
+    <footer class="footer mt-5 py-3 bg-light">
+        <div class="container text-center">
+            <span class="text-muted">mrvautin</span>
+        </div>
+    </footer>
+  </body>
+</html>
