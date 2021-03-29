@@ -1,15 +1,22 @@
-const blog = {
-    name: 'mrvautin',
-    description: 'This is the blog description',
-    twitterHandle: '@mrvautin',
-    baseUrl: 'https://squido.netlify.app',
-    layout: 'layout.hbs',
-    sourceDir: 'posts/',
-    sourcesExt: 'markdown',
-    summaryLength: 250,
-    port: 4965
+const config = {
+    development: {
+        name: 'squido',
+        description: 'This is the blog description',
+        twitterHandle: '@mrvautin',
+        baseUrl: 'http://localhost:4965',
+        sourcesExt: 'markdown',
+        summaryLength: 250,
+        port: 4965
+    },
+    production: {
+        name: 'squido2',
+        description: 'This is the blog description',
+        twitterHandle: '@mrvautin',
+        baseUrl: 'https://squido.netlify.app',
+        sourcesExt: 'markdown',
+        summaryLength: 250,
+        port: 4965
+    }
 };
 
-module.exports = {
-    blog
-};
+module.exports = config;
