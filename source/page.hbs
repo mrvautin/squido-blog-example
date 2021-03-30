@@ -1,0 +1,37 @@
+<div class="row">
+  {{#each posts}}
+  <div class="col-xs-12 col-sm-3 mb-4 d-flex align-items-stretch">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <p class="card-text">
+          <h2>
+            <a href="/{{this.permalink}}">{{this.title}}</a> 
+          </h2>
+          {{this.summary}}
+        </p>
+        <div class="d-flex justify-content-between align-items-center">
+          <a class="btn btn-outline-secondary" href="/{{this.permalink}}">Read more..</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
+{{!-- Pagination --}}
+{{#if meta.config.pagination}}
+{{#if shouldPaginate}}
+<div class="row">
+  <div class="col-xs-12 col-sm-12 mb-4 text-center">
+    <p class="text-muted">Page {{page}} of {{pages}}</p>
+    <div class="btn-group" role="group">
+    {{#if prevPage }}
+        <a href="/page/{{prevPage}}" class="btn btn-outline-secondary">&laquo; Prev Page</a>
+    {{/if}}
+    {{#if nextPage }}
+        <a href="/page/{{nextPage}}" class="btn btn-outline-secondary">Next Page &raquo;</a>
+    {{/if}}
+    </div>
+  </div>
+</div>
+{{/if}}
+{{/if}}
