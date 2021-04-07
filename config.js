@@ -14,7 +14,7 @@ const config = {
         name: 'squido',
         description: 'This is the blog description',
         twitterHandle: '@mrvautin',
-        baseUrl: 'https://squido.netlify.app',
+        baseUrl: 'https://blog.squido.org/',
         sourcesExt: 'markdown',
         summaryLength: 250,
         port: 4965,

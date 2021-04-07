@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "Squido build file",
   "scripts": {
-    "build": "squido build -c && node source/cp.js"
+    "build": "squido build -c"
   },
   "dependencies": {
     "squido": "latest"
