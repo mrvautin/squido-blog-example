@@ -55,7 +55,8 @@ h1, h2{
     font-weight: 700; 
 }
 
-.brand a{
+.brand{
+    padding-top: 10px;
     color: #264653 !important;
     font-size: 2.8rem !important;
     font-weight: 700 !important;
