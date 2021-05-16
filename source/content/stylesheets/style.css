@@ -66,6 +66,10 @@ main > .container {
     padding: 60px 15px 0;
 }
 
+.related-card-title{
+    min-height: 100px;
+}
+
 .footer {
     position: absolute;
     bottom: 0;
