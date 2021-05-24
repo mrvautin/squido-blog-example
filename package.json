@@ -6,6 +6,6 @@
     "build": "squido build -c"
   },
   "dependencies": {
-    "squido": "latest"
+    "squido" : "mrvautin/squido"
   }
 }
